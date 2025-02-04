@@ -1,4 +1,4 @@
-package academy.javapro;
+
 
 public class Student {
     private String name;

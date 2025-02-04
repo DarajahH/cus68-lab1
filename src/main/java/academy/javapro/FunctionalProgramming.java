@@ -1,7 +1,8 @@
-package academy.javapro;
 
-import java.util.*;
-import java.util.stream.*;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class FunctionalProgramming {
     public static void main(String[] args) {
@@ -23,13 +24,14 @@ public class FunctionalProgramming {
         // Hint: Use .map(n -> ...)
         List<Integer> doubledNumbers = numbers.stream()
             // Write your code here
-            .collect(Collectors.toList());
+        		.map(n -> n*2)
+        		.collect(Collectors.toList());
 
         // TASK 3: Sum all numbers in doubledNumbers
         // TODO: Create a stream that sums all numbers
         // Hint: Use .mapToInt(n -> n).sum()
-        int sum = 0; // Replace with your stream code
-
+       int sum = numbers.stream()
+        .mapToInt(n -> n+n).sum(); // Replace with your stream code 
         // Print results
         System.out.println("Doubled numbers: " + doubledNumbers);
         System.out.println("Sum of doubled numbers: " + sum);
